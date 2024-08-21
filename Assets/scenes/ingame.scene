@@ -1,0 +1,296 @@
+{
+  "__guid": "ca08045a-9ad0-4519-af11-ed9da41798c7",
+  "GameObjects": [
+    {
+      "__guid": "3dc546c8-2d70-4c84-a1b3-8254fcfc5da2",
+      "Flags": 0,
+      "Name": "Camera",
+      "Position": "-830.5902,-0.000005870536,235.2153",
+      "Rotation": "0,0.07796557,0,0.9969561",
+      "Tags": "maincamera",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "NetworkOrphaned": 2,
+      "OwnerTransfer": 0,
+      "Components": [
+        {
+          "__type": "Sandbox.CameraComponent",
+          "__guid": "a3e1ab8a-f6c7-4f14-94e1-87d445685553",
+          "BackgroundColor": "0.33333,0.46275,0.52157,1",
+          "ClearFlags": "All",
+          "FieldOfView": 60,
+          "IsMainCamera": true,
+          "Orthographic": false,
+          "OrthographicHeight": 1204,
+          "Priority": 1,
+          "RenderExcludeTags": "",
+          "RenderTags": "",
+          "TargetEye": "None",
+          "Viewport": "0,0,1,1",
+          "ZFar": 10000,
+          "ZNear": 10
+        }
+      ]
+    },
+    {
+      "__guid": "79cb4706-0a22-4939-b13c-165c622d5184",
+      "Flags": 0,
+      "Name": "Sun",
+      "Position": "207.0546,-5.280075,29.67478",
+      "Rotation": "-0.1464466,0.3535534,-0.3535534,0.8535535",
+      "Tags": "light_directional,light",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.DirectionalLight",
+          "__guid": "24a9b55e-f77d-4a20-8b75-022618b9758c",
+          "FogMode": "Enabled",
+          "FogStrength": 1,
+          "LightColor": "0.91373,0.98039,1,1",
+          "Shadows": true,
+          "SkyColor": "0,0,0,0"
+        }
+      ]
+    },
+    {
+      "__guid": "3dd9b9c6-4909-40c8-a8f2-9ef9fd7b7296",
+      "Flags": 0,
+      "Name": "2D Skybox",
+      "Position": "266.0256,26.09817,-11.00439",
+      "Tags": "skybox",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SkyBox2D",
+          "__guid": "dda70291-6c57-4a04-9986-ec3d0b0f3001",
+          "SkyMaterial": "materials/skybox/skybox_day_01.vmat",
+          "Tint": "1,1,1,1"
+        }
+      ]
+    },
+    {
+      "__guid": "6c985efe-d12f-48db-aa23-b766bf52c8ea",
+      "Flags": 0,
+      "Name": "Listener",
+      "Position": "252.9873,13.88252,-51.02302",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.AudioListener",
+          "__guid": "a6535623-6987-47ec-9811-9a3a4c3e65c9",
+          "UseCameraDirection": true
+        }
+      ]
+    },
+    {
+      "__guid": "666ae600-1984-4263-832a-e2dfc626ce84",
+      "Flags": 0,
+      "Name": "Plane",
+      "Scale": "1,7,1",
+      "Tags": "wall",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "e45c7bc1-4ff7-44a9-b041-0bc494ed9fd0",
+          "BodyGroups": 18446744073709551615,
+          "Model": "models/dev/plane.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.PlaneCollider",
+          "__guid": "c8771608-8c2e-440e-8893-c14d026a72d1",
+          "Center": "0,0,0",
+          "IsTrigger": false,
+          "Scale": "100,100",
+          "Static": true,
+          "Surface": "surfaces/plaster.surface"
+        }
+      ]
+    },
+    {
+      "__guid": "27412872-4c77-4f60-b158-e8cc4246e1e6",
+      "Flags": 0,
+      "Name": "NetworkManager",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.NetworkHelper",
+          "__guid": "1471ba22-1ddc-4368-9f78-1fea4b6ce328",
+          "PlayerPrefab": {
+            "_type": "gameobject",
+            "prefab": "prefabs/player.prefab"
+          },
+          "SpawnPoints": [
+            {
+              "_type": "gameobject",
+              "go": "9003b2ab-e137-498d-84db-45b036e97205"
+            },
+            {
+              "_type": "gameobject",
+              "go": "ab458a41-26d7-4be2-9176-9121f346a40a"
+            }
+          ],
+          "StartServer": true
+        }
+      ]
+    },
+    {
+      "__guid": "a32a1353-7c72-4294-ade0-de6feb349c0b",
+      "Flags": 0,
+      "Name": "SpawnPoints",
+      "Enabled": true,
+      "Children": [
+        {
+          "__guid": "9003b2ab-e137-498d-84db-45b036e97205",
+          "Flags": 0,
+          "Name": "Object",
+          "Position": "0,181.4631,0",
+          "Enabled": true
+        },
+        {
+          "__guid": "ab458a41-26d7-4be2-9176-9121f346a40a",
+          "Flags": 0,
+          "Name": "Object",
+          "Position": "0,-251.1381,0",
+          "Enabled": true
+        }
+      ]
+    },
+    {
+      "__guid": "6c082fd2-bba3-4bfc-bf28-193f83ca0719",
+      "Flags": 0,
+      "Name": "Ledge",
+      "Position": "0.00008490969,-368.1888,-12.58244",
+      "Scale": "2,1,0.5",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "Children": [
+        {
+          "__guid": "a10516da-ef3d-4ab0-9174-120bced35675",
+          "Flags": 0,
+          "Name": "Cube",
+          "Position": "0,0,0",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "92064aa6-179a-4091-931f-5e06d6af288b",
+              "__enabled": false,
+              "BodyGroups": 18446744073709551615,
+              "Model": "models/dev/box.vmdl",
+              "RenderType": "On",
+              "Tint": "0,0.63333,1,0.61"
+            },
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "496b6cb8-37b5-4887-bea3-4f0cb5695358",
+              "Center": "0,0,0",
+              "IsTrigger": true,
+              "Scale": "50,50,50",
+              "Static": false
+            },
+            {
+              "__type": "Ledge",
+              "__guid": "c0a7cbe6-e44b-474a-a68b-2e63b58f596d",
+              "IsLeft": false,
+              "Offset": 60,
+              "Parent": {
+                "_type": "gameobject",
+                "go": "6c082fd2-bba3-4bfc-bf28-193f83ca0719"
+              }
+            }
+          ]
+        },
+        {
+          "__guid": "dfde615d-387c-47bc-a0c7-813a813f0305",
+          "Flags": 0,
+          "Name": "Object",
+          "Position": "0,0,100",
+          "Enabled": true
+        }
+      ]
+    },
+    {
+      "__guid": "a86f1717-10b9-4d39-a446-c4252b772086",
+      "Flags": 0,
+      "Name": "Ledge (1)",
+      "Position": "0.00008490969,372.5754,-12.58244",
+      "Scale": "2,1,0.5",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "Children": [
+        {
+          "__guid": "59c7358f-225e-41e4-bed3-3cbb74b96591",
+          "Flags": 0,
+          "Name": "Cube",
+          "Position": "0,0,0",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "5dbabb35-e9f9-48b1-9d00-feb2f2d8ad86",
+              "__enabled": false,
+              "BodyGroups": 18446744073709551615,
+              "Model": "models/dev/box.vmdl",
+              "RenderType": "On",
+              "Tint": "0,0.63333,1,0.61"
+            },
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "e1cfb952-271f-4f0c-bf93-a8cd25bf195a",
+              "Center": "0,0,0",
+              "IsTrigger": true,
+              "Scale": "50,50,50",
+              "Static": false
+            },
+            {
+              "__type": "Ledge",
+              "__guid": "ca4d00db-447d-432c-b88c-9383c6fef4de",
+              "IsLeft": true,
+              "Offset": 60,
+              "Parent": {
+                "_type": "gameobject",
+                "go": "a86f1717-10b9-4d39-a446-c4252b772086"
+              }
+            }
+          ]
+        },
+        {
+          "__guid": "7524d9a2-5eb0-4880-b820-790d2e213d0e",
+          "Flags": 0,
+          "Name": "Object",
+          "Position": "0,0,100",
+          "Enabled": true
+        }
+      ]
+    }
+  ],
+  "SceneProperties": {
+    "FixedUpdateFrequency": 50,
+    "MaxFixedUpdates": 5,
+    "NetworkFrequency": 30,
+    "NetworkInterpolation": true,
+    "ThreadedAnimation": true,
+    "TimeScale": 1,
+    "UseFixedUpdate": true,
+    "NavMesh": {
+      "Enabled": false,
+      "IncludeStaticBodies": true,
+      "IncludeKeyframedBodies": true,
+      "EditorAutoUpdate": true,
+      "AgentHeight": 64,
+      "AgentRadius": 16,
+      "AgentStepSize": 18,
+      "AgentMaxSlope": 40,
+      "ExcludedBodies": "",
+      "IncludedBodies": ""
+    }
+  },
+  "Title": "ingame",
+  "Description": "",
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

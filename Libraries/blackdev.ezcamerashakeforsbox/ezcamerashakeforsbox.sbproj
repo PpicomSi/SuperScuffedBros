@@ -1,0 +1,27 @@
+{
+  "Title": "EZ Camera Shake for s\u0026box",
+  "Type": "library",
+  "Org": "blackdev",
+  "Ident": "ezcamerashakeforsbox",
+  "Schema": 1,
+  "IncludeSourceFiles": false,
+  "Resources": null,
+  "PackageReferences": [],
+  "EditorReferences": null,
+  "Metadata": {
+    "CsProjName": "",
+    "Compiler": {
+      "RootNamespace": "EZCameraShake",
+      "DefineConstants": "SANDBOX;ADDON;DEBUG",
+      "NoWarn": "1701;1702;1591;",
+      "WarningsAsErrors": "",
+      "Whitelist": true,
+      "AssemblyReferences": [],
+      "IgnoreFolders": [
+        "editor",
+        "unittest"
+      ],
+      "DistinctAssemblyReferences": []
+    }
+  }
+}

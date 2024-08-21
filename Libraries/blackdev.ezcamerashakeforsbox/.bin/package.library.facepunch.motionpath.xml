@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>package.library.facepunch.motionpath</name>
+    </assembly>
+    <members>
+        <member name="T:MotionPath">
+            <summary>
+            Move an object around a path.
+            </summary>
+        </member>
+        <member name="P:MotionPath.Target">
+            <summary>
+            The object that moves around this path.
+            </summary>
+        </member>
+        <member name="P:MotionPath.Time">
+            <summary>
+            Normalized time between 0 and 1 for how far the target is on this path.
+            </summary>
+        </member>
+        <member name="P:MotionPath.UsePointRotation">
+            <summary>
+            Rotate the target using the rotation of points, otherwise use the curvature of the path.
+            </summary>
+        </member>
+        <member name="P:MotionPath.Manual">
+            <summary>
+            Time is controlled manually.
+            </summary>
+        </member>
+        <member name="P:MotionPath.Duration">
+            <summary>
+            How long the path takes to complete.
+            </summary>
+        </member>
+        <member name="P:MotionPathPoint.LookAt">
+            <summary>
+            Look at this object.
+            </summary>
+        </member>
+    </members>
+</doc>

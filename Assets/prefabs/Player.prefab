@@ -1,0 +1,89 @@
+{
+  "RootObject": {
+    "__guid": "a51c4c73-9c4f-4505-8624-1ce4a32dac34",
+    "Flags": 0,
+    "Name": "player",
+    "Tags": "player",
+    "Enabled": true,
+    "NetworkMode": 1,
+    "Components": [
+      {
+        "__type": "Sandbox.CharacterController",
+        "__guid": "68a2b27a-cdc1-490d-87e7-53c92739e431",
+        "Acceleration": 10,
+        "Bounciness": 0.3,
+        "GroundAngle": 45,
+        "Height": 64,
+        "IgnoreLayers": "",
+        "Radius": 16,
+        "StepHeight": 18,
+        "UseCollisionRules": true
+      },
+      {
+        "__type": "Sandbox.Citizen.CitizenAnimationHelper",
+        "__guid": "5be0a432-cdd9-48e2-9013-221f0c7f4fe1",
+        "BodyWeight": 1,
+        "EyesWeight": 1,
+        "HeadWeight": 1,
+        "LookAtEnabled": false,
+        "Target": {
+          "_type": "component",
+          "component_id": "d3fd19fc-665f-4dd3-a2fc-25f7b78c0889",
+          "go": "f9b77be3-1548-4ce9-a3af-5d78509bc6ac",
+          "component_type": "SkinnedModelRenderer"
+        }
+      },
+      {
+        "__type": "Sandbox.BoxCollider",
+        "__guid": "86cc0cc2-9511-42f0-8e5b-c7ce7fef3d09",
+        "Center": "0,0,35.00003",
+        "IsTrigger": false,
+        "Scale": "27,27,69",
+        "Static": false
+      },
+      {
+        "__type": "PlayerMovement",
+        "__guid": "abff672b-9918-46f6-9009-06d5695f275d",
+        "AirControl": 8,
+        "CrouchSpeed": 150,
+        "GroundControl": 10,
+        "JumpForce": 1700,
+        "MaxForce": 500,
+        "MaxJump": 2,
+        "Model": {
+          "_type": "gameobject",
+          "go": "f9b77be3-1548-4ce9-a3af-5d78509bc6ac"
+        },
+        "Speed": 350
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "f9b77be3-1548-4ce9-a3af-5d78509bc6ac",
+        "Flags": 0,
+        "Name": "Sphere",
+        "Rotation": "0,0,-0.7071067,0.7071068",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.SkinnedModelRenderer",
+            "__guid": "d3fd19fc-665f-4dd3-a2fc-25f7b78c0889",
+            "BodyGroups": 341,
+            "CreateBoneObjects": false,
+            "Model": "models/citizen/citizen.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1",
+            "UseAnimGraph": true
+          }
+        ]
+      }
+    ],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}
