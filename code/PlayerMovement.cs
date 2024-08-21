@@ -4,6 +4,7 @@ using Sandbox.VR;
 using System.Numerics;
 using System.Linq;
 using System.Diagnostics;
+using System.Threading.Tasks;
 
 public sealed class PlayerMovement : Component
 {
@@ -29,6 +30,7 @@ public sealed class PlayerMovement : Component
 
 	public Vector3 WishVelocity = Vector3.Zero;
 
+	[Property] HurtBox Hurtt;
 
 	[Sync] public bool IsCrouching { get; set; } = false;
 
@@ -80,6 +82,9 @@ public sealed class PlayerMovement : Component
 				}
 				BuildWishVelocity();
 				Move();
+
+				if ( Input.Pressed( "attack1" ) ) Attack();
+
 			}
 
 
@@ -90,6 +95,24 @@ public sealed class PlayerMovement : Component
 		};
 
 	}
+
+	async void Attack()
+	{
+
+		await Wait( 0.3f );
+
+		
+	}
+
+	async Task Wait(float seconds)
+	{
+		Hurtt.HurtStart();
+
+		await Task.DelaySeconds( seconds );
+
+		Hurtt.HurtStop();
+	}
+
 
 	void BuildWishVelocity()
 	{

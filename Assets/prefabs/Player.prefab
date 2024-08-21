@@ -38,12 +38,18 @@
         "__guid": "86cc0cc2-9511-42f0-8e5b-c7ce7fef3d09",
         "Center": "0,0,35.00003",
         "IsTrigger": false,
-        "Scale": "27,27,69",
+        "Scale": "162.6,27,69",
         "Static": false
       },
       {
         "__type": "PlayerMovement",
         "__guid": "abff672b-9918-46f6-9009-06d5695f275d",
+        "Hurtt": {
+          "_type": "component",
+          "component_id": "ddf9482b-c849-444e-b3db-e276ccb214e8",
+          "go": "3a02a30f-ba41-41fd-be4a-af8e1efd6a75",
+          "component_type": "HurtBox"
+        },
         "AirControl": 8,
         "CrouchSpeed": 150,
         "GroundControl": 10,
@@ -55,6 +61,12 @@
           "go": "f9b77be3-1548-4ce9-a3af-5d78509bc6ac"
         },
         "Speed": 350
+      },
+      {
+        "__type": "PlayerHealth",
+        "__guid": "1762e98e-b2be-470c-85f7-604ccef7bada",
+        "Life": 999,
+        "Percentage": 1
       }
     ],
     "Children": [
@@ -74,6 +86,51 @@
             "RenderType": "On",
             "Tint": "1,1,1,1",
             "UseAnimGraph": true
+          }
+        ],
+        "Children": [
+          {
+            "__guid": "3a02a30f-ba41-41fd-be4a-af8e1efd6a75",
+            "Flags": 0,
+            "Name": "Hitbox",
+            "Enabled": true,
+            "Components": [
+              {
+                "__type": "HurtBox",
+                "__guid": "ddf9482b-c849-444e-b3db-e276ccb214e8",
+                "position": "50,0,35",
+                "Sphere": {
+                  "_type": "component",
+                  "component_id": "ef6d8830-1440-4898-b21b-29a8836c2b36",
+                  "go": "3a02a30f-ba41-41fd-be4a-af8e1efd6a75",
+                  "component_type": "ModelRenderer"
+                },
+                "SphereCollider": {
+                  "_type": "component",
+                  "component_id": "b01b4d49-5ea5-4f75-bfa5-b95eeed86803",
+                  "go": "3a02a30f-ba41-41fd-be4a-af8e1efd6a75",
+                  "component_type": "SphereCollider"
+                }
+              },
+              {
+                "__type": "Sandbox.ModelRenderer",
+                "__guid": "ef6d8830-1440-4898-b21b-29a8836c2b36",
+                "__enabled": false,
+                "BodyGroups": 18446744073709551615,
+                "Model": "models/dev/sphere.vmdl",
+                "RenderType": "On",
+                "Tint": "1,0,0,0.27"
+              },
+              {
+                "__type": "Sandbox.SphereCollider",
+                "__guid": "b01b4d49-5ea5-4f75-bfa5-b95eeed86803",
+                "__enabled": false,
+                "Center": "0,0,0",
+                "IsTrigger": true,
+                "Radius": 33,
+                "Static": false
+              }
+            ]
           }
         ]
       }
