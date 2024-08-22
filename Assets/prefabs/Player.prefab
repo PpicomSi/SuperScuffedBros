@@ -66,7 +66,7 @@
         "__type": "PlayerHealth",
         "__guid": "1762e98e-b2be-470c-85f7-604ccef7bada",
         "Life": 999,
-        "Percentage": 1
+        "Percentage": 0
       }
     ],
     "Children": [

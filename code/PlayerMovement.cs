@@ -52,6 +52,8 @@ public sealed class PlayerMovement : Component
 
 	protected override void OnFixedUpdate()
 	{
+		this.Transform.Position *= new Vector3( 0, 1, 1 );
+
 		if ( IsLedging ) 
 		{
 			if ( Input.Pressed( "Forward" ) ) ExitLedge();
